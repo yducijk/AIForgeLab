@@ -1,6 +1,10 @@
-const isPrime = (num) => {
-  for (let i = 2, sqrt = Math.sqrt(num); i <= sqrt; i++) {
-    if (num % i === 0) return false;
-  }
-  return num > 1;
-};
+const aliceBalanceAfter = await aptos.getAccountCoinsData({
+  accountAddress: aliceAddress,
+  minimumLedgerVersion: BigInt(response.version),
+});
+const bobBalanceAfter = await aptos.getAccountCoinsData({
+  accountAddress: bobAddress,
+});
+const sponsorBalanceAfter = await aptos.getAccountCoinsData({
+  accountAddress: sponsorAddress,
+});
